@@ -113,7 +113,7 @@ int main()
 	SOCKADDR_IN addr;
 	int size = sizeof(addr);
 	addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-	addr.sin_port = htons(2323);
+	addr.sin_port = htons(1045);
 	addr.sin_family = AF_INET;
 
 	SOCKET sListen = socket(AF_INET, SOCK_STREAM, 0);
@@ -176,7 +176,7 @@ int main()
 				std::string a = FindNumber(number);
 				send(newConnection,a.c_str(), sizeof(a), NULL);
 				LgSent(a);
-				//std::cout << "Number is sent\n";
+
 			}
 	    }
 	system("pause");
