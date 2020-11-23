@@ -33,7 +33,7 @@ int main()
 	SOCKADDR_IN addr;
 	int size = sizeof(addr);
 	addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-	addr.sin_port = htons(2323);
+	addr.sin_port = htons(1045);
 	addr.sin_family = AF_INET;
 	 Connection = socket(AF_INET, SOCK_STREAM, 0);
 	if (connect(Connection, (SOCKADDR*)&addr, size) != 0)
